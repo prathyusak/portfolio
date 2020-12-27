@@ -1,17 +1,18 @@
 import React from 'react';
 import './Header.css';
 
-function Header ({resumeData,handleClick}) {
-    return (
-      <React.Fragment>
-        <header id="home">
-         <nav id="nav-wrap">
+function Header ({resumeData,navbarClasses,headerRef,visibleSection}) {
+ 
+  return (
+       <div >
+        <header id="home" >
+         <nav id="nav-wrap" className={navbarClasses.join(" ")} ref={headerRef}>
             <ul id="nav" className="nav">
-               <li className="current"><a className="smoothscroll" href="#home" onClick={handleClick}>Home</a></li>
-               <li><a className="smoothscroll" href="#about" onClick={handleClick}>About</a></li>
-             <li><a className="smoothscroll" href="#resume" onClick={handleClick}>Resume</a></li>
-               <li><a className="smoothscroll" href="#portfolio" onClick={handleClick}>Works</a></li>
-               <li><a className="smoothscroll" href="#contact" onClick={handleClick}>Contact</a></li>
+               <li className="current"><a className={`smoothscroll ${visibleSection === "home" ? "selected" : ""}`}  href="#home" >Home</a></li>
+               <li><a className={`smoothscroll ${visibleSection === "about" ? "selected" : ""}`}  href="#about" >About</a></li>
+             <li><a className={`smoothscroll ${visibleSection === "resume" ? "selected" : ""}`}  href="#resume" >Resume</a></li>
+               <li><a className={`smoothscroll ${visibleSection === "portfolio" ? "selected" : ""}`}  href="#portfolio" >Works</a></li>
+               <li><a className={`smoothscroll ${visibleSection === "contact" ? "selected" : ""}`}  href="#contact" >Contact</a></li>
             </ul>
          </nav>
 
@@ -41,7 +42,8 @@ function Header ({resumeData,handleClick}) {
          </p>
 
       </header>
-      </React.Fragment>
+      </div>
+     
     );
   }
 

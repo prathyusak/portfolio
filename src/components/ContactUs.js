@@ -8,10 +8,10 @@ export default function ContactUs ({resumeData}) {
 
     emailjs.sendForm('default_service', 'template_j3io1ha', e.target, 'user_eCsw6Zt0O4mbWkiVYfJgk')
       .then((result) => {
-        console.log(e.target)
-          console.log(result.text);
+        alert("Message Sent.");
+        document.forms["contact-form"].reset();
       }, (error) => {
-          console.log(error.text);
+        alert("error sending Message")
       });
   }
     return (
@@ -24,10 +24,8 @@ export default function ContactUs ({resumeData}) {
             </div>
           </div>
           <div className="row">
-            
              <form id="contact-form" onSubmit={sendEmail}>
                 <div className="form-group">
-                <input type="hidden" name="contact_number" />
                     <label htmlFor="name">Name</label>
                     <input type="text" className="form-control" name="user_name"/>
                 </div>

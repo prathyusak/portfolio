@@ -12,7 +12,7 @@ export default function Porfolio ({resumeData}) {
               return(
                 <div className="columns portfolio-item">
                   <div className="item-wrap">
-                    <a href={item.imgurl}>
+                    <a href={item.imgurl} target="_blank" rel="noreferrer" >
                         <div className="portfolio-item-meta">
                           <h5>{item.name}</h5>
                           <p>{item.description}</p>

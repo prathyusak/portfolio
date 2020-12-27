@@ -140,7 +140,7 @@ ul#nav li a {
    line-height: 32px;
    text-decoration: none;
    text-align: left;
-   color: green;
+   color: black;
 
    -webkit-transition: color .2s ease-in-out;
    -moz-transition: color .2s ease-in-out;
@@ -152,4 +152,19 @@ ul#nav li a {
 ul#nav li a:active { background-color: transparent !important; }
 /*ul#nav li.current a { color: #F06000; }*/
 
+.scrolled{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: grey;
+}
+
+.sec {
+   color:blue;
+}
+
+.selected {
+  border-bottom: 3px solid #11bb9a;
+  color: #11bb9a !important;
+}
 
