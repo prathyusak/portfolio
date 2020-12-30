@@ -6,11 +6,11 @@ export default function Porfolio ({resumeData}) {
       <div className="row">
         <div className="twelve columns collapsed">
           <h1>Check Out Some of My Works.</h1>
-          <div id="portfolio-wrapper" className="bgrid-quarters">
+          <div id="portfolio-wrapper">
           {
             resumeData.portfolio && resumeData.portfolio.map((item)=>{
               return(
-                <div className="columns portfolio-item">
+                <div className="portfolio-item">
                   <div className="item-wrap">
                     <a href={item.imgurl} target="_blank" rel="noreferrer" >
                         <div className="portfolio-item-meta">

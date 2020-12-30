@@ -71,13 +71,13 @@ export default  function Resume ({resumeData}) {
                {resumeData.skillsDescription}
                </p>
 
-   				<div className="bgrid-quarters row">
+   				<div >
 
    				   <ul className="skill-row">
                 {
                   resumeData.skills && resumeData.skills.map((item) => {
                     return(
-                      <li className="skill-column">
+                      <li className="skill-float">
                         <div className="skill-card"> 
                       {item.skillname}
                         </div>

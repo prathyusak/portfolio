@@ -46,6 +46,9 @@ footer .social-links li {
     margin-left: 42px;
     color: #F06000;
 }
+.social-links ul {
+   align-items: center  ;
+}
 
 footer .social-links li:first-child { margin-left: 0; }
 

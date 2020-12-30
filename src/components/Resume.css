@@ -53,18 +53,33 @@
 
 }
 
-.skill-column {
+.skill-float {
   float: left;
-  width: auto;
+  width: 200px;
   padding: 0 10px;
 }
 
 .skill-row {
   margin: 0 -5px;
-}
+} 
 /* Clear floats after the columns */
+
 .skill-row:after {
   content: "";
   display: table;
   clear: both;
 }
+
+/* div .skill-row {
+   margin:  0;
+   padding: 0;
+   font-size: 20px;
+   background-color: grey;
+}
+div .skill-row li {
+   display: inline-block;
+   margin: 5px;
+   padding: 0;
+}
+div .skill-row li a { color: #fff; } */
+
